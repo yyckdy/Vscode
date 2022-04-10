@@ -5,6 +5,8 @@ Manager::Manager()
 
 Manager::Manager(string name, string passWord)
 {
+    this->m_Name=name;
+    this->m_Password=passWord;
 }
 
 //操作函数
