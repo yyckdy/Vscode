@@ -1,86 +1,85 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//#include <algorithm>
-//#include <string>
-////³£ÓÃ²éÕÒËã·¨_count
-//
-////1¡¢Í³¼ÆÄÚÖÃÊı¾İÀàĞÍ
-//
-//void test01()
-//{
-//	vector<int>v;
-//
-//	v.push_back(10);
-//	v.push_back(40);
-//	v.push_back(30);
-//	v.push_back(40);
-//	v.push_back(20);
-//	v.push_back(40);
-//
-//	int num = count(v.begin(), v.end(), 40);
-//
-//	cout << "40µÄÔªËØ¸öÊıÎª£º " << num << endl;
-//}
-//
-////2¡¢Í³¼Æ×Ô¶¨ÒåÊı¾İÀàĞÍ
-//
-//class Person
-//{
-//public:
-//	Person(string name, int age)
-//	{
-//		this->m_Name = name;
-//		this->m_Age = age;
-//	}
-//
-//	bool operator==(const Person & p)
-//	{
-//		if (this->m_Age == p.m_Age)
-//		{
-//			return true;
-//		}
-//		else
-//		{
-//			return false;
-//		}
-//	}
-//
-//	string m_Name;
-//	int m_Age;
-//};
-//
-//void test02()
-//{
-//	vector<Person>v;
-//
-//	Person p1("Áõ±¸", 35);
-//	Person p2("¹ØÓğ", 35);
-//	Person p3("ÕÅ·É", 35);
-//	Person p4("ÕÔÔÆ", 30);
-//	Person p5("²Ü²Ù", 40);
-//
-//	//½«ÈËÔ±²åÈëµ½ÈİÆ÷ÖĞ
-//	v.push_back(p1);
-//	v.push_back(p2);
-//	v.push_back(p3);
-//	v.push_back(p4);
-//	v.push_back(p5);
-//
-//	Person p("Öî¸ğÁÁ", 35);
-//
-//	int num = count(v.begin(), v.end(), p);
-//
-//	cout << "ºÍÖî¸ğÁÁÍ¬ËêÊıµÄÈËÔ±¸öÊıÎª£º" << num << endl;
-//}
-//
-//int main() {
-//	
-//	//test01();
-//
-//	test02();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+#include <string>
+//å¸¸ç”¨æŸ¥æ‰¾ç®—æ³•_count
+
+//1ã€ç»Ÿè®¡å†…ç½®æ•°æ®ç±»å‹
+
+void test01()
+{
+	vector<int>v;
+
+	v.push_back(10);
+	v.push_back(40);
+	v.push_back(30);
+	v.push_back(40);
+	v.push_back(20);
+	v.push_back(40);
+
+	int num = count(v.begin(), v.end(), 40);
+
+	cout << "40çš„å…ƒç´ ä¸ªæ•°ä¸ºï¼š " << num << endl;
+}
+
+//2ã€ç»Ÿè®¡è‡ªå®šä¹‰æ•°æ®ç±»å‹
+
+class Person
+{
+public:
+	Person(string name, int age)
+	{
+		this->m_Name = name;
+		this->m_Age = age;
+	}
+
+	bool operator==(const Person & p)
+	{
+		if (this->m_Age == p.m_Age)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	string m_Name;
+	int m_Age;
+};
+
+void test02()
+{
+	vector<Person>v;
+
+	Person p1("åˆ˜å¤‡", 35);
+	Person p2("å…³ç¾½", 35);
+	Person p3("å¼ é£", 35);
+	Person p4("èµµäº‘", 30);
+	Person p5("æ›¹æ“", 40);
+
+	//å°†äººå‘˜æ’å…¥åˆ°å®¹å™¨ä¸­
+	v.push_back(p1);
+	v.push_back(p2);
+	v.push_back(p3);
+	v.push_back(p4);
+	v.push_back(p5);
+
+	Person p("è¯¸è‘›äº®", 35);
+
+	int num = count(v.begin(), v.end(), p);
+
+	cout << "å’Œè¯¸è‘›äº®åŒå²æ•°çš„äººå‘˜ä¸ªæ•°ä¸ºï¼š" << num << endl;
+}
+
+int main() {
+	
+	//test01();
+
+	test02();
+
+
+	return 0;
+}

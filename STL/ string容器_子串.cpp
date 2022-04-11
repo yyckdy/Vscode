@@ -2,7 +2,7 @@
 using namespace std;
 #include <string>
 
-// stringÇó×Ó´®
+// stringæ±‚å­ä¸²
 
 void test01()
 {
@@ -13,12 +13,12 @@ void test01()
 	cout << "subStr = " << subStr << endl;
 }
 
-//ÊµÓÃ²Ù×÷
+//å®ç”¨æ“ä½œ
 void test02()
 {
 	string email = "zhangsan@sina.com";
 
-	//´ÓÓÊ¼şµØÖ·ÖĞ »ñÈ¡ ÓÃ»§ÃûĞÅÏ¢
+	//ä»é‚®ä»¶åœ°å€ä¸­ è·å– ç”¨æˆ·åä¿¡æ¯
 
 	int pos = email.find("@"); // 8
 	cout << pos << endl;

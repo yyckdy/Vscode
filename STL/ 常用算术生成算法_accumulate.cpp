@@ -1,29 +1,28 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//
-//#include <numeric>
-//
-////³£ÓÃËãÊõÉú³ÉËã·¨
-//void test01()
-//{
-//	vector<int>v;
-//
-//	for (int i = 0; i <= 100; i++)
-//	{
-//		v.push_back(i);
-//	}
-//	//²ÎÊı3  ÆğÊ¼ÀÛ¼ÓÖµ
-//	int total = accumulate(v.begin(), v.end(), 0);
-//
-//	cout << "total = " << total << endl;
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+
+#include <numeric>
+
+//å¸¸ç”¨ç®—æœ¯ç”Ÿæˆç®—æ³•
+void test01()
+{
+	vector<int>v;
+
+	for (int i = 0; i <= 100; i++)
+	{
+		v.push_back(i);
+	}
+	//å‚æ•°3  èµ·å§‹ç´¯åŠ å€¼
+	int total = accumulate(v.begin(), v.end(), 0);
+
+	cout << "total = " << total << endl;
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}

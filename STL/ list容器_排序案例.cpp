@@ -3,9 +3,9 @@ using namespace std;
 #include <string>
 #include <list>
 
-//listÈİÆ÷ ÅÅĞò°¸Àı ¶ÔÓÚ×Ô¶¨ÒåÊı¾İÀàĞÍ ×öÅÅĞò
+//listå®¹å™¨ æ’åºæ¡ˆä¾‹ å¯¹äºè‡ªå®šä¹‰æ•°æ®ç±»å‹ åšæ’åº
 
-//°´ÕÕÄêÁä½øĞĞÉıĞò£¬Èç¹ûÄêÁäÏàÍ¬°´ÕÕÉí¸ß½øĞĞ½µĞò
+//æŒ‰ç…§å¹´é¾„è¿›è¡Œå‡åºï¼Œå¦‚æœå¹´é¾„ç›¸åŒæŒ‰ç…§èº«é«˜è¿›è¡Œé™åº
 
 class Person
 {
@@ -17,19 +17,19 @@ public:
 		this->m_Height = height;
 	}
 
-	string m_Name; //ĞÕÃû
-	int m_Age;   //ÄêÁä
-	int m_Height; // Éí¸ß
+	string m_Name; //å§“å
+	int m_Age;   //å¹´é¾„
+	int m_Height; // èº«é«˜
 };
 
 
-//Ö¸¶¨ÅÅĞò¹æÔò
+//æŒ‡å®šæ’åºè§„åˆ™
 bool comparePerson(Person &p1,Person &p2)
 {
-	//°´ÕÕÄêÁä ÉıĞò
+	//æŒ‰ç…§å¹´é¾„ å‡åº
 	if (p1.m_Age == p2.m_Age)
 	{
-		//ÄêÁäÏàÍ¬  °´ÕÕÉí¸ß½µĞò
+		//å¹´é¾„ç›¸åŒ  æŒ‰ç…§èº«é«˜é™åº
 		return p1.m_Height > p2.m_Height;
 	}
 	else
@@ -41,17 +41,17 @@ bool comparePerson(Person &p1,Person &p2)
 
 void test01()
 {
-	list<Person>L; //´´½¨ÈİÆ÷
+	list<Person>L; //åˆ›å»ºå®¹å™¨
 
-	//×¼±¸Êı¾İ
-	Person p1("Áõ±¸", 35, 175);
-	Person p2("²Ü²Ù", 45, 180);
-	Person p3("ËïÈ¨", 40, 170);
-	Person p4("ÕÔÔÆ", 25, 190);
-	Person p5("ÕÅ·É", 35, 160);
-	Person p6("¹ØÓğ", 35, 200);
+	//å‡†å¤‡æ•°æ®
+	Person p1("åˆ˜å¤‡", 35, 175);
+	Person p2("æ›¹æ“", 45, 180);
+	Person p3("å­™æƒ", 40, 170);
+	Person p4("èµµäº‘", 25, 190);
+	Person p5("å¼ é£", 35, 160);
+	Person p6("å…³ç¾½", 35, 200);
 
-	//²åÈëÊı¾İ
+	//æ’å…¥æ•°æ®
 	L.push_back(p1);
 	L.push_back(p2);
 	L.push_back(p3);
@@ -61,17 +61,17 @@ void test01()
 
 	for (list<Person>::iterator it = L.begin(); it != L.end(); it++)
 	{
-		cout << "ĞÕÃû£º " << (*it).m_Name << " ÄêÁä£º " << it->m_Age << " Éí¸ß£º " << it->m_Height << endl;
+		cout << "å§“åï¼š " << (*it).m_Name << " å¹´é¾„ï¼š " << it->m_Age << " èº«é«˜ï¼š " << it->m_Height << endl;
 	}
 
-	//ÅÅĞò
+	//æ’åº
 	cout << "---------------------------------" << endl;
-	cout << "ÅÅĞòºó£º" << endl;
+	cout << "æ’åºåï¼š" << endl;
 
 	L.sort(comparePerson);
 	for (list<Person>::iterator it = L.begin(); it != L.end(); it++)
 	{
-		cout << "ĞÕÃû£º " << (*it).m_Name << " ÄêÁä£º " << it->m_Age << " Éí¸ß£º " << it->m_Height << endl;
+		cout << "å§“åï¼š " << (*it).m_Name << " å¹´é¾„ï¼š " << it->m_Age << " èº«é«˜ï¼š " << it->m_Height << endl;
 	}
 }
 

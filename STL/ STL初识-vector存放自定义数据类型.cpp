@@ -1,80 +1,78 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//#include <string>
-//
-////vectorÈİÆ÷ÖĞ´æ·Å×Ô¶¨ÒåÊı¾İÀàĞÍ
-//class Person
-//{
-//public:
-//	Person(string name, int age)
-//	{
-//		this->m_Name = name;
-//		this->m_Age = age;
-//	}
-//	string m_Name;
-//	int m_Age;
-//};
-//
-//void test01()
-//{
-//	vector<Person>v;
-//
-//	Person p1("aaa", 10);
-//	Person p2("bbb", 20);
-//	Person p3("ccc", 30);
-//	Person p4("ddd", 40);
-//	Person p5("eee", 50);
-//
-//	//ÏòÈİÆ÷ÖĞÌí¼ÓÊı¾İ
-//	v.push_back(p1);
-//	v.push_back(p2);
-//	v.push_back(p3);
-//	v.push_back(p4);
-//	v.push_back(p5);
-//
-//	//±éÀúÈİÆ÷ÖĞµÄÊı¾İ
-//	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
-//	{
-//		//cout << "ĞÕÃû£º " << (*it).m_Name << " ÄêÁä£º" << (*it).m_Age << endl;
-//		cout << "ĞÕÃû£º " << it->m_Name << " ÄêÁä£º" << it->m_Age << endl;
-//	}
-//}
-//
-//
-////´æ·Å×Ô¶¨ÒåÊı¾İÀàĞÍ Ö¸Õë
-//void test02()
-//{
-//	vector<Person*>v;
-//
-//	Person p1("aaa", 10);
-//	Person p2("bbb", 20);
-//	Person p3("ccc", 30);
-//	Person p4("ddd", 40);
-//	Person p5("eee", 50);
-//
-//	//ÏòÈİÆ÷ÖĞÌí¼ÓÊı¾İ
-//	v.push_back(&p1);
-//	v.push_back(&p2);
-//	v.push_back(&p3);
-//	v.push_back(&p4);
-//	v.push_back(&p5);
-//
-//	//±éÀúÈİÆ÷
-//	for (vector<Person *>::iterator it = v.begin(); it != v.end(); it++)
-//	{
-//		cout << "::ĞÕÃû£º " << (*it)->m_Name << " ÄêÁä£º " << (*it)->m_Age << endl;
-//	}
-//	
-//}
-//
-//
-//int main() {
-//
-//	//test01();
-//	test02();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+#include <string>
+
+//vectorå®¹å™¨ä¸­å­˜æ”¾è‡ªå®šä¹‰æ•°æ®ç±»å‹
+class Person
+{
+public:
+	Person(string name, int age)
+	{
+		this->m_Name = name;
+		this->m_Age = age;
+	}
+	string m_Name;
+	int m_Age;
+};
+
+void test01()
+{
+	vector<Person>v;
+
+	Person p1("aaa", 10);
+	Person p2("bbb", 20);
+	Person p3("ccc", 30);
+	Person p4("ddd", 40);
+	Person p5("eee", 50);
+
+	//å‘å®¹å™¨ä¸­æ·»åŠ æ•°æ®
+	v.push_back(p1);
+	v.push_back(p2);
+	v.push_back(p3);
+	v.push_back(p4);
+	v.push_back(p5);
+
+	//éå†å®¹å™¨ä¸­çš„æ•°æ®
+	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+	{
+		//cout << "å§“åï¼š " << (*it).m_Name << " å¹´é¾„ï¼š" << (*it).m_Age << endl;
+		cout << "å§“åï¼š " << it->m_Name << " å¹´é¾„ï¼š" << it->m_Age << endl;
+	}
+}
+
+
+//å­˜æ”¾è‡ªå®šä¹‰æ•°æ®ç±»å‹ æŒ‡é’ˆ
+void test02()
+{
+	vector<Person*>v;
+
+	Person p1("aaa", 10);
+	Person p2("bbb", 20);
+	Person p3("ccc", 30);
+	Person p4("ddd", 40);
+	Person p5("eee", 50);
+
+	//å‘å®¹å™¨ä¸­æ·»åŠ æ•°æ®
+	v.push_back(&p1);
+	v.push_back(&p2);
+	v.push_back(&p3);
+	v.push_back(&p4);
+	v.push_back(&p5);
+
+	//éå†å®¹å™¨
+	for (vector<Person *>::iterator it = v.begin(); it != v.end(); it++)
+	{
+		cout << "::å§“åï¼š " << (*it)->m_Name << " å¹´é¾„ï¼š " << (*it)->m_Age << endl;
+	}
+	
+}
+
+
+int main() {
+
+	//test01();
+	test02();
+
+	return 0;
+}

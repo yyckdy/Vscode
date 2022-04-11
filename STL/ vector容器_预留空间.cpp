@@ -2,15 +2,15 @@
 using namespace std;
 #include <vector>
 
-//vectorÈİÆ÷ Ô¤Áô¿Õ¼ä
+//vectorå®¹å™¨ é¢„ç•™ç©ºé—´
 void test01()
 {
 	vector<int>v;
 
-	//ÀûÓÃreserveÔ¤Áô¿Õ¼ä
+	//åˆ©ç”¨reserveé¢„ç•™ç©ºé—´
 	v.reserve(100000);
 
-	int num = 0; //Í³¼Æ¿ª±Ù´ÎÊı
+	int num = 0; //ç»Ÿè®¡å¼€è¾Ÿæ¬¡æ•°
 	int * p = NULL;
 	for (int i = 0; i < 100000; i++)
 	{

@@ -2,7 +2,7 @@
 using namespace std;
 #include <set>
 
-// setÈİÆ÷ÅÅĞò
+// setå®¹å™¨æ’åº
 
 class MyCompare
 {
@@ -29,7 +29,7 @@ void test01()
     }
     cout << endl;
 
-    //Ö¸¶¨ÅÅĞò¹æÔòÎª´Ó´óµ½Ğ¡
+    //æŒ‡å®šæ’åºè§„åˆ™ä¸ºä»å¤§åˆ°å°
     set<int, MyCompare> s2;
 
     s2.insert(10);

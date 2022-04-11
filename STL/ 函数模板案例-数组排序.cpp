@@ -1,81 +1,80 @@
-//#include<iostream>
-//using namespace std;
-//
-////ÊµÏÖÍ¨ÓÃ ¶ÔÊı×é½øĞĞÅÅĞòµÄº¯Êı   
-////¹æÔò ´Ó´óµ½Ğ¡
-////Ëã·¨ Ñ¡Ôñ 
-////²âÊÔ char Êı×é¡¢ intÊı×é
-//
-////½»»»º¯ÊıÄ£°å
-//template<class T>
-//void mySwap(T&a, T&b)
-//{
-//	T temp = a;
-//	a = b;
-//	b = temp;
-//}
-//
-////ÅÅĞòËã·¨
-//template<class T>
-//void mySort( T arr[] , int len)
-//{
-//	for (int i = 0; i < len; i++)
-//	{
-//		int max = i; // ÈÏ¶¨×î´óÖµµÄÏÂ±ê
-//		for (int j = i + 1; j < len; j++)
-//		{
-//			//ÈÏ¶¨µÄ×î´óÖµ ±È ±éÀú³öµÄÊıÖµ ÒªÏÂ£¬ËµÃ÷ jÏÂ±êµÄÔªËØ²ÅÊÇÕæÕıµÄ×î´óÖµ
-//			if (arr[max] < arr[j])
-//			{
-//				max = j;//¸üĞÂ×î´óÖµÏÂ±ê
-//			}
-//		}
-//		if (max != i)
-//		{
-//			//½»»»maxºÍiÔªËØ
-//			mySwap(arr[max], arr[i]);
-//		}
-//	}
-//}
-//
-//
-////Ìá¹©´òÓ¡Êı×éÄ£°å
-//template<class T>
-//void printArray(T arr[], int len)
-//{
-//	for (int i = 0; i < len; i++)
-//	{
-//		cout << arr[i] << " ";
-//	}
-//	cout << endl;
-//}
-//
-//void test01()
-//{
-//	//²âÊÔcharÊı×é
-//	char charArr[] = "badcfe";
-//	int num = sizeof(charArr) / sizeof(char);
-//	mySort(charArr, num);
-//	printArray(charArr, num);
-//}
-//
-//void test02()
-//{
-//	//²âÊÔintÊı×é
-//	int intArr[] = { 7,5,1,3,9,2,4,6,8 };
-//
-//	int num = sizeof(intArr) / sizeof(int);
-//
-//	mySort(intArr, num);
-//
-//	printArray(intArr, num);
-//}
-//
-//int main() {
-//
-//	//test01();
-//	test02();
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+
+//å®ç°é€šç”¨ å¯¹æ•°ç»„è¿›è¡Œæ’åºçš„å‡½æ•°   
+//è§„åˆ™ ä»å¤§åˆ°å°
+//ç®—æ³• é€‰æ‹© 
+//æµ‹è¯• char æ•°ç»„ã€ intæ•°ç»„
+
+//äº¤æ¢å‡½æ•°æ¨¡æ¿
+template<class T>
+void mySwap(T&a, T&b)
+{
+	T temp = a;
+	a = b;
+	b = temp;
+}
+
+//æ’åºç®—æ³•
+template<class T>
+void mySort( T arr[] , int len)
+{
+	for (int i = 0; i < len; i++)
+	{
+		int max = i; // è®¤å®šæœ€å¤§å€¼çš„ä¸‹æ ‡
+		for (int j = i + 1; j < len; j++)
+		{
+			//è®¤å®šçš„æœ€å¤§å€¼ æ¯” éå†å‡ºçš„æ•°å€¼ è¦ä¸‹ï¼Œè¯´æ˜ jä¸‹æ ‡çš„å…ƒç´ æ‰æ˜¯çœŸæ­£çš„æœ€å¤§å€¼
+			if (arr[max] < arr[j])
+			{
+				max = j;//æ›´æ–°æœ€å¤§å€¼ä¸‹æ ‡
+			}
+		}
+		if (max != i)
+		{
+			//äº¤æ¢maxå’Œiå…ƒç´ 
+			mySwap(arr[max], arr[i]);
+		}
+	}
+}
+
+
+//æä¾›æ‰“å°æ•°ç»„æ¨¡æ¿
+template<class T>
+void printArray(T arr[], int len)
+{
+	for (int i = 0; i < len; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+}
+
+void test01()
+{
+	//æµ‹è¯•charæ•°ç»„
+	char charArr[] = "badcfe";
+	int num = sizeof(charArr) / sizeof(char);
+	mySort(charArr, num);
+	printArray(charArr, num);
+}
+
+void test02()
+{
+	//æµ‹è¯•intæ•°ç»„
+	int intArr[] = { 7,5,1,3,9,2,4,6,8 };
+
+	int num = sizeof(intArr) / sizeof(int);
+
+	mySort(intArr, num);
+
+	printArray(intArr, num);
+}
+
+int main() {
+
+	//test01();
+	test02();
+
+	return 0;
+}

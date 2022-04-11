@@ -8,7 +8,7 @@ void myPrint(int val)
 	cout << val << " ";
 }
 
-//³£ÓÃ¼¯ºÏËã·¨  set_difference 
+//å¸¸ç”¨é›†åˆç®—æ³•  set_difference 
 void test01()
 {
 	vector<int>v1;
@@ -19,20 +19,20 @@ void test01()
 		v2.push_back(i+5);
 	}
 
-	//´´½¨Ä¿±êÈİÆ÷
+	//åˆ›å»ºç›®æ ‡å®¹å™¨
 	vector<int>vTarget;
-	//¸øÄ¿±êÈİÆ÷¿ª±Ù¿Õ¼ä
-	//×îÌØÊâÇé¿ö  Á½¸öÈİÆ÷Ã»ÓĞ½»¼¯ È¡Á½¸öÈİÆ÷ÖĞ´óµÄsize×÷ÎªÄ¿±êÈİÆ÷¿ª±Ù¿Õ¼ä
+	//ç»™ç›®æ ‡å®¹å™¨å¼€è¾Ÿç©ºé—´
+	//æœ€ç‰¹æ®Šæƒ…å†µ  ä¸¤ä¸ªå®¹å™¨æ²¡æœ‰äº¤é›† å–ä¸¤ä¸ªå®¹å™¨ä¸­å¤§çš„sizeä½œä¸ºç›®æ ‡å®¹å™¨å¼€è¾Ÿç©ºé—´
 	vTarget.resize( max(v1.size(),v2.size()) );
 
-	cout << "v1ºÍv2µÄ²î¼¯Îª£º" << endl;
+	cout << "v1å’Œv2çš„å·®é›†ä¸ºï¼š" << endl;
 
 	vector<int>::iterator itEnd = set_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());
 
 	for_each(vTarget.begin(), itEnd, myPrint);
 	cout << endl;
 
-	cout << "v2ºÍv1µÄ²î¼¯Îª£º" << endl;
+	cout << "v2å’Œv1çš„å·®é›†ä¸ºï¼š" << endl;
 	itEnd = set_difference(v2.begin(), v2.end(), v1.begin(), v1.end(), vTarget.begin());
 
 	for_each(vTarget.begin(), itEnd, myPrint);
@@ -43,7 +43,6 @@ int main() {
 
 	test01();
 
-	system("pause");
 
 	return 0;
 }

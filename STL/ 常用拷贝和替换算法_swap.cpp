@@ -3,7 +3,7 @@ using namespace std;
 #include <vector>
 #include <algorithm>
 
-//³£ÓÃ¿½±´ºÍÌæ»»Ëã·¨ swap
+//å¸¸ç”¨æ‹·è´å’Œæ›¿æ¢ç®—æ³• swap
 void myPrint(int val)
 {
 	cout << val << " ";
@@ -19,14 +19,14 @@ void test01()
 		v2.push_back(i+100);
 	}
 
-	cout << "½»»»Ç°£º " << endl;
+	cout << "äº¤æ¢å‰ï¼š " << endl;
 	for_each(v1.begin(), v1.end(), myPrint);
 	cout << endl;
 	for_each(v2.begin(), v2.end(), myPrint);
 	cout << endl;
 
 	cout << "-----------------" << endl;
-	cout << "½»»»ºó£º " << endl;
+	cout << "äº¤æ¢åï¼š " << endl;
 
 	swap(v1, v2);
 
@@ -41,7 +41,6 @@ int main() {
 
 	test01();
 
-	system("pause");
 
 	return 0;
 }

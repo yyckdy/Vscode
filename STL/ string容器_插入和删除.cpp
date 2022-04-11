@@ -2,17 +2,17 @@
 using namespace std;
 #include <string>
 
-//×Ö·û´® ²åÈëºÍÉ¾³ı
+//å­—ç¬¦ä¸² æ’å…¥å’Œåˆ é™¤
 void test01()
 {
 	string str = "hello";
 
-	//²åÈë
+	//æ’å…¥
 	str.insert(1, "111");
 	//h111ello
 	cout << "str = " << str << endl;
 
-	//É¾³ı
+	//åˆ é™¤
 	str.erase(1, 3);
 	cout << "str = " << str << endl;
 }

@@ -11,10 +11,10 @@ void printVector(vector<int>&v)
 	cout << endl;
 }
 
-//vectorÈİÆ÷¹¹Ôì
+//vectorå®¹å™¨æ„é€ 
 void test01()
 {
-	vector<int>v1; //Ä¬ÈÏ¹¹Ôì ÎŞ²Î¹¹Ôì
+	vector<int>v1; //é»˜è®¤æ„é€  æ— å‚æ„é€ 
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -23,15 +23,15 @@ void test01()
 
 	printVector(v1);
 
-	//Í¨¹ıÇø¼ä·½Ê½½øĞĞ¹¹Ôì
+	//é€šè¿‡åŒºé—´æ–¹å¼è¿›è¡Œæ„é€ 
 	vector<int>v2(v1.begin(), v1.end());
 	printVector(v2);
 
-	//n¸öelem·½Ê½¹¹Ôì
+	//nä¸ªelemæ–¹å¼æ„é€ 
 	vector<int>v3(10, 100);
 	printVector(v3);
 
-	//¿½±´¹¹Ôì
+	//æ‹·è´æ„é€ 
 	vector<int>v4(v3);
 	printVector(v4);
 }

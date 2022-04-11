@@ -3,7 +3,7 @@ using namespace std;
 #include <queue>
 #include <string>
 
-//¶ÓÁĞ Queue
+//é˜Ÿåˆ— Queue
 class Person
 {
 public:
@@ -18,45 +18,44 @@ public:
 
 void test01()
 {
-	//´´½¨¶ÓÁĞ
+	//åˆ›å»ºé˜Ÿåˆ—
 	queue<Person>q;
 
 
-	//×¼±¸Êı¾İ
-	Person p1("ÌÆÉ®", 30);
-	Person p2("ËïÎò¿Õ",1000);
-	Person p3("Öí°Ë½ä", 900);
-	Person p4("É³É®", 800);
+	//å‡†å¤‡æ•°æ®
+	Person p1("å”åƒ§", 30);
+	Person p2("å­™æ‚Ÿç©º",1000);
+	Person p3("çŒªå…«æˆ’", 900);
+	Person p4("æ²™åƒ§", 800);
 
-	//Èë¶Ó
+	//å…¥é˜Ÿ
 	q.push(p1);
 	q.push(p2);
 	q.push(p3);
 	q.push(p4);
 
-	cout << "¶ÓÁĞ´óĞ¡Îª£º " << q.size() << endl;
+	cout << "é˜Ÿåˆ—å¤§å°ä¸ºï¼š " << q.size() << endl;
 
-	//ÅĞ¶ÏÖ»Òª¶ÓÁĞ²»Îª¿Õ£¬²é¿´¶ÓÍ·£¬²é¿´¶ÓÎ²£¬³ö¶Ó
+	//åˆ¤æ–­åªè¦é˜Ÿåˆ—ä¸ä¸ºç©ºï¼ŒæŸ¥çœ‹é˜Ÿå¤´ï¼ŒæŸ¥çœ‹é˜Ÿå°¾ï¼Œå‡ºé˜Ÿ
 	while ( !q.empty())
 	{
-		//²é¿´¶ÓÍ·
-		cout << "¶ÓÍ·ÔªËØ --- ĞÕÃû£º " << q.front().m_Name << " ÄêÁä £º " << q.front().m_Age << endl;
+		//æŸ¥çœ‹é˜Ÿå¤´
+		cout << "é˜Ÿå¤´å…ƒç´  --- å§“åï¼š " << q.front().m_Name << " å¹´é¾„ ï¼š " << q.front().m_Age << endl;
 	
-		//²é¿´¶ÓÎ²
-		cout << "¶ÓÎ²ÔªËØ --- ĞÕÃû£º " << q.back().m_Name << " ÄêÁä £º " << q.back().m_Age << endl;
+		//æŸ¥çœ‹é˜Ÿå°¾
+		cout << "é˜Ÿå°¾å…ƒç´  --- å§“åï¼š " << q.back().m_Name << " å¹´é¾„ ï¼š " << q.back().m_Age << endl;
 
-		//³ö¶Ó
+		//å‡ºé˜Ÿ
 		q.pop();
 	}
 
-	cout << "¶ÓÁĞ´óĞ¡Îª£º " << q.size() << endl;
+	cout << "é˜Ÿåˆ—å¤§å°ä¸ºï¼š " << q.size() << endl;
 }
 
 int main() {
 
 	test01();
 
-	system("pause");
 
 	return 0;
 }

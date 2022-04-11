@@ -2,8 +2,8 @@
 using namespace std;
 #include <string>
 
-//Ä£°å¾ÖÏŞĞÔ
-//Ä£°å²¢²»ÊÇÍòÄÜµÄ£¬ÓĞĞ©ÌØ¶¨Êı¾İÀàĞÍ£¬ĞèÒªÓÃ¾ßÌå»¯·½Ê½×öÌØÊâÊµÏÖ
+//æ¨¡æ¿å±€é™æ€§
+//æ¨¡æ¿å¹¶ä¸æ˜¯ä¸‡èƒ½çš„ï¼Œæœ‰äº›ç‰¹å®šæ•°æ®ç±»å‹ï¼Œéœ€è¦ç”¨å…·ä½“åŒ–æ–¹å¼åšç‰¹æ®Šå®ç°
 
 class Person
 {
@@ -15,13 +15,13 @@ public:
 		this->m_Age = age;
 	}
 
-	//ĞÕÃû
+	//å§“å
 	string m_Name;
-	//ÄêÁä
+	//å¹´é¾„
 	int m_Age;
 };
 
-//¶Ô±ÈÁ½¸öÊı¾İÊÇ·ñÏàµÈº¯Êı
+//å¯¹æ¯”ä¸¤ä¸ªæ•°æ®æ˜¯å¦ç›¸ç­‰å‡½æ•°
 template<class T>
 bool myCompare(T &a, T &b)
 {
@@ -35,7 +35,7 @@ bool myCompare(T &a, T &b)
 	}
 }
 
-//ÀûÓÃ¾ßÌå»¯PersonµÄ°æ±¾ÊµÏÖ´úÂë£¬¾ßÌå»¯ÓÅÏÈµ÷ÓÃ
+//åˆ©ç”¨å…·ä½“åŒ–Personçš„ç‰ˆæœ¬å®ç°ä»£ç ï¼Œå…·ä½“åŒ–ä¼˜å…ˆè°ƒç”¨
 template<> bool myCompare(Person &p1, Person &p2)
 {
 	if (p1.m_Name == p2.m_Name && p1.m_Age == p2.m_Age)
@@ -89,7 +89,6 @@ int main() {
 	test02();
 
 
-	system("pause");
 
 	return 0;
 }

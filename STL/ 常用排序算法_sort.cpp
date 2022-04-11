@@ -1,40 +1,39 @@
-//#include<iostream>
-//using namespace std;
-//#include <algorithm>
-//#include <vector>
-//#include <functional>
-//
-////³£ÓÃÅÅĞòËã·¨ sort
-//void myPrint(int val)
-//{
-//	cout << val << " ";
-//}
-//void test01()
-//{
-//	vector<int>v;
-//	
-//	v.push_back(10);
-//	v.push_back(30);
-//	v.push_back(50);
-//	v.push_back(20);
-//	v.push_back(40);
-//
-//	//ÀûÓÃsort½øĞĞÉıĞò
-//	sort(v.begin(), v.end());
-//	for_each(v.begin(), v.end(), myPrint);
-//	cout << endl;
-//
-//	//¸Ä±äÎª ½µĞò
-//	sort(v.begin(), v.end(), greater<int>());
-//	for_each(v.begin(), v.end(), myPrint);
-//	cout << endl;
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <algorithm>
+#include <vector>
+#include <functional>
+
+//å¸¸ç”¨æ’åºç®—æ³• sort
+void myPrint(int val)
+{
+	cout << val << " ";
+}
+void test01()
+{
+	vector<int>v;
+	
+	v.push_back(10);
+	v.push_back(30);
+	v.push_back(50);
+	v.push_back(20);
+	v.push_back(40);
+
+	//åˆ©ç”¨sortè¿›è¡Œå‡åº
+	sort(v.begin(), v.end());
+	for_each(v.begin(), v.end(), myPrint);
+	cout << endl;
+
+	//æ”¹å˜ä¸º é™åº
+	sort(v.begin(), v.end(), greater<int>());
+	for_each(v.begin(), v.end(), myPrint);
+	cout << endl;
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}

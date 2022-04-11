@@ -3,9 +3,9 @@ using namespace std;
 #include <vector>
 #include <algorithm>
 
-//³£ÓÃ²éÕÒËã·¨  count_if
+//å¸¸ç”¨æŸ¥æ‰¾ç®—æ³•  count_if
 
-//Í³¼ÆÄÚÖÃÊı¾İÀàĞÍ
+//ç»Ÿè®¡å†…ç½®æ•°æ®ç±»å‹
 class Greater20
 {
 public:
@@ -27,7 +27,7 @@ void test01()
 
 	int num = count_if(v.begin(), v.end(), Greater20());
 
-	cout << "´óÓÚ20µÄÔªËØ¸öÊıÎª£º " << num << endl;
+	cout << "å¤§äº20çš„å…ƒç´ ä¸ªæ•°ä¸ºï¼š " << num << endl;
 }
 
 class Person
@@ -51,16 +51,16 @@ public:
 	}
 };
 
-//Í³¼Æ×Ô¶¨ÒåÊı¾İÀàĞÍ
+//ç»Ÿè®¡è‡ªå®šä¹‰æ•°æ®ç±»å‹
 void test02()
 {
 	vector<Person>v;
 	
-	Person p1("Áõ±¸", 35);
-	Person p2("¹ØÓğ", 35);
-	Person p3("ÕÅ·É", 35);
-	Person p4("ÕÔÔÆ", 40);
-	Person p5("²Ü²Ù", 20);
+	Person p1("åˆ˜å¤‡", 35);
+	Person p2("å…³ç¾½", 35);
+	Person p3("å¼ é£", 35);
+	Person p4("èµµäº‘", 40);
+	Person p5("æ›¹æ“", 20);
 
 	v.push_back(p1);
 	v.push_back(p2);
@@ -68,9 +68,9 @@ void test02()
 	v.push_back(p4);
 	v.push_back(p5);
 
-	//Í³¼Æ  ´óÓÚ20ËêÈËÔ±¸öÊı
+	//ç»Ÿè®¡  å¤§äº20å²äººå‘˜ä¸ªæ•°
 	int num = count_if(v.begin(), v.end(), AgeGreater20());
-	cout << "´óÓÚ20ËêµÄÈËÔ±¸öÊıÎª£º" << num << endl;
+	cout << "å¤§äº20å²çš„äººå‘˜ä¸ªæ•°ä¸ºï¼š" << num << endl;
 }
 
 int main() {
@@ -79,7 +79,6 @@ int main() {
 
 	test02();
 
-	system("pause");
 
 	return 0;
 }

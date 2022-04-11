@@ -1,53 +1,52 @@
-//#include<iostream>
-//using namespace std;
-//#include <list>
-//
-////listÈÝÆ÷´óÐ¡²Ù×÷
-//
-//void printList(const list<int>&L)
-//{
-//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++)
-//	{
-//		cout << *it << " ";
-//	}
-//	cout << endl;
-//}
-//
-//void test01()
-//{
-//	list<int>L1;
-//	L1.push_back(10);
-//	L1.push_back(20);
-//	L1.push_back(30);
-//	L1.push_back(40);
-//
-//	printList(L1);
-//
-//	//ÅÐ¶ÏÈÝÆ÷ÊÇ·ñÎª¿Õ
-//	if (L1.empty())
-//	{
-//		cout << "L1Îª¿Õ" << endl;
-//	}
-//	else
-//	{
-//		cout << "L1²»Îª¿Õ" << endl;
-//		cout << "L1µÄÔªËØ¸öÊýÎª£º " << L1.size() << endl;
-//	}
-//
-//	//ÖØÐÂÖ¸¶¨´óÐ¡
-//	L1.resize(10, 10000);
-//	printList(L1);
-//
-//	L1.resize(2);
-//	printList(L1);
-//
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <list>
+
+//listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
+
+void printList(const list<int>&L)
+{
+	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++)
+	{
+		cout << *it << " ";
+	}
+	cout << endl;
+}
+
+void test01()
+{
+	list<int>L1;
+	L1.push_back(10);
+	L1.push_back(20);
+	L1.push_back(30);
+	L1.push_back(40);
+
+	printList(L1);
+
+	//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½
+	if (L1.empty())
+	{
+		cout << "L1Îªï¿½ï¿½" << endl;
+	}
+	else
+	{
+		cout << "L1ï¿½ï¿½Îªï¿½ï¿½" << endl;
+		cout << "L1ï¿½ï¿½Ôªï¿½Ø¸ï¿½ï¿½ï¿½Îªï¿½ï¿½ " << L1.size() << endl;
+	}
+
+	//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ð¡
+	L1.resize(10, 10000);
+	printList(L1);
+
+	L1.resize(2);
+	printList(L1);
+
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}

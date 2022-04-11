@@ -1,40 +1,39 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//#include <algorithm>
-////³£ÓÃ¼¯ºÏËã·¨ set_union
-//void myPrint(int val)
-//{
-//	cout << val << " ";
-//}
-//
-//void test01()
-//{
-//	vector<int>v1;
-//	vector<int>v2;
-//
-//	for (int i = 0; i < 10; i++)
-//	{
-//		v1.push_back(i);
-//		v2.push_back(i + 5);
-//	}
-//
-//	vector<int>vTarget;
-//	//Ä¿±êÈİÆ÷ÌáÇ°¿ª±Ù¿Õ¼ä
-//	//×îÌØÊâÇé¿ö Á½¸öÈİÆ÷Ã»ÓĞ½»¼¯£¬²¢¼¯¾ÍÊÇÁ½¸öÈİÆ÷sizeÏà¼Ó
-//	vTarget.resize(v1.size() + v2.size());
-//
-//	vector<int>::iterator itEnd = set_union(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());
-//
-//	for_each(vTarget.begin(), itEnd, myPrint);
-//	cout << endl;
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+//å¸¸ç”¨é›†åˆç®—æ³• set_union
+void myPrint(int val)
+{
+	cout << val << " ";
+}
+
+void test01()
+{
+	vector<int>v1;
+	vector<int>v2;
+
+	for (int i = 0; i < 10; i++)
+	{
+		v1.push_back(i);
+		v2.push_back(i + 5);
+	}
+
+	vector<int>vTarget;
+	//ç›®æ ‡å®¹å™¨æå‰å¼€è¾Ÿç©ºé—´
+	//æœ€ç‰¹æ®Šæƒ…å†µ ä¸¤ä¸ªå®¹å™¨æ²¡æœ‰äº¤é›†ï¼Œå¹¶é›†å°±æ˜¯ä¸¤ä¸ªå®¹å™¨sizeç›¸åŠ 
+	vTarget.resize(v1.size() + v2.size());
+
+	vector<int>::iterator itEnd = set_union(v1.begin(), v1.end(), v2.begin(), v2.end(), vTarget.begin());
+
+	for_each(vTarget.begin(), itEnd, myPrint);
+	cout << endl;
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}

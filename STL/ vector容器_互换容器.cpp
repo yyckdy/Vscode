@@ -2,7 +2,7 @@
 using namespace std;
 #include <vector>
 
-//vectorÈİÆ÷»¥»»
+//vectorå®¹å™¨äº’æ¢
 
 void printVector(vector<int>&v)
 {
@@ -13,7 +13,7 @@ void printVector(vector<int>&v)
 	cout << endl;
 }
 
-//1¡¢»ù±¾Ê¹ÓÃ
+//1ã€åŸºæœ¬ä½¿ç”¨
 void test01()
 {
 	vector<int>v1;
@@ -22,7 +22,7 @@ void test01()
 		v1.push_back(i);
 	}
 
-	cout << "½»»»Ç°£º " << endl;
+	cout << "äº¤æ¢å‰ï¼š " << endl;
 	printVector(v1);
 
 	vector<int>v2;
@@ -33,15 +33,15 @@ void test01()
 	printVector(v2);
 
 
-	cout << "½»»»ºó£º " << endl;
+	cout << "äº¤æ¢åï¼š " << endl;
 	v1.swap(v2);
 	printVector(v1);
 	printVector(v2);
 
 }
 
-//2¡¢Êµ¼ÊÓÃÍ¾
-//ÇÉÓÃswap¿ÉÒÔÊÕËõÄÚ´æ¿Õ¼ä
+//2ã€å®é™…ç”¨é€”
+//å·§ç”¨swapå¯ä»¥æ”¶ç¼©å†…å­˜ç©ºé—´
 void test02()
 {
 	vector<int>v;
@@ -50,19 +50,19 @@ void test02()
 		v.push_back(i);
 	}
 
-	cout << "vµÄÈİÁ¿Îª£º " << v.capacity() << endl;
-	cout << "vµÄ´óĞ¡Îª£º " << v.size() << endl;
+	cout << "vçš„å®¹é‡ä¸ºï¼š " << v.capacity() << endl;
+	cout << "vçš„å¤§å°ä¸ºï¼š " << v.size() << endl;
 
 
-	v.resize(3); //ÖØĞÂÖ¸¶¨´óĞ¡
-	cout << "vµÄÈİÁ¿Îª£º " << v.capacity() << endl;
-	cout << "vµÄ´óĞ¡Îª£º " << v.size() << endl;
+	v.resize(3); //é‡æ–°æŒ‡å®šå¤§å°
+	cout << "vçš„å®¹é‡ä¸ºï¼š " << v.capacity() << endl;
+	cout << "vçš„å¤§å°ä¸ºï¼š " << v.size() << endl;
 
-	//ÇÉÓÃswapÊÕËõÄÚ´æ
+	//å·§ç”¨swapæ”¶ç¼©å†…å­˜
 	vector<int>(v).swap(v); 
 
-	cout << "vµÄÈİÁ¿Îª£º " << v.capacity() << endl;
-	cout << "vµÄ´óĞ¡Îª£º " << v.size() << endl;
+	cout << "vçš„å®¹é‡ä¸ºï¼š " << v.capacity() << endl;
+	cout << "vçš„å¤§å°ä¸ºï¼š " << v.size() << endl;
 }
 
 int main() {
@@ -71,7 +71,6 @@ int main() {
 
 	test02();
 
-	system("pause");
 
 	return 0;
 }

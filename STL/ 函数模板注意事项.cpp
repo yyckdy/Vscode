@@ -1,46 +1,45 @@
-//#include<iostream>
-//using namespace std;
-//
-////º¯ÊıÄ£°å×¢ÒâÊÂÏî
-//
-//template<class T> //typename¿ÉÒÔÌæ»»³Éclass
-//void mySwap(T&a, T&b)
-//{
-//	T temp = a;
-//	a = b;
-//	b = temp;
-//}
-//
-////1¡¢×Ô¶¯ÀàĞÍÍÆµ¼£¬±ØĞëÍÆµ¼³öÒ»ÖÂµÄÊı¾İÀàĞÍT²Å¿ÉÒÔÊ¹ÓÃ
-//void test01()
-//{
-//	int a = 10;
-//	int b = 20;
-//	char c = 'c';
-//	//mySwap(a, b); //ÕıÈ·£¡
-//	//mySwap(a, c); //´íÎó£¡ÍÆµ¼²»³öÒ»ÖÂµÄTÀàĞÍ
-//	cout << "a = " << a << endl;
-//	cout << "b = " << b << endl;
-//}
-//
-////2¡¢Ä£°å±ØĞëÒªÈ·¶¨³öTµÄÊı¾İÀàĞÍ£¬²Å¿ÉÒÔÊ¹ÓÃ
-//template<class T>
-//void func()
-//{
-//	cout << "func µ÷ÓÃ" << endl;
-//}
-//
-//void test02()
-//{
-//	func<int>();
-//}
-//
-//int main() {
-//
-//	//test01();
-//	test02();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+
+//å‡½æ•°æ¨¡æ¿æ³¨æ„äº‹é¡¹
+
+template<class T> //typenameå¯ä»¥æ›¿æ¢æˆclass
+void mySwap(T&a, T&b)
+{
+	T temp = a;
+	a = b;
+	b = temp;
+}
+
+//1ã€è‡ªåŠ¨ç±»å‹æ¨å¯¼ï¼Œå¿…é¡»æ¨å¯¼å‡ºä¸€è‡´çš„æ•°æ®ç±»å‹Tæ‰å¯ä»¥ä½¿ç”¨
+void test01()
+{
+	int a = 10;
+	int b = 20;
+	char c = 'c';
+	//mySwap(a, b); //æ­£ç¡®ï¼
+	//mySwap(a, c); //é”™è¯¯ï¼æ¨å¯¼ä¸å‡ºä¸€è‡´çš„Tç±»å‹
+	cout << "a = " << a << endl;
+	cout << "b = " << b << endl;
+}
+
+//2ã€æ¨¡æ¿å¿…é¡»è¦ç¡®å®šå‡ºTçš„æ•°æ®ç±»å‹ï¼Œæ‰å¯ä»¥ä½¿ç”¨
+template<class T>
+void func()
+{
+	cout << "func è°ƒç”¨" << endl;
+}
+
+void test02()
+{
+	func<int>();
+}
+
+int main() {
+
+	//test01();
+	test02();
+
+
+	return 0;
+}

@@ -2,7 +2,7 @@
 using namespace std;
 #include<vector>
 #include <algorithm>
-//³£ÓÃ±éÀúËã·¨ transform
+//å¸¸ç”¨éå†ç®—æ³• transform
 
 class Transform
 {
@@ -31,9 +31,9 @@ void test01()
 		v.push_back(i);
 	}
 
-	vector<int>vTarget; //Ä¿±êÈİÆ÷
+	vector<int>vTarget; //ç›®æ ‡å®¹å™¨
 
-	vTarget.resize(v.size()); //Ä¿±êÈİÆ÷ ĞèÒªÌáÇ°¿ª±Ù¿Õ¼ä
+	vTarget.resize(v.size()); //ç›®æ ‡å®¹å™¨ éœ€è¦æå‰å¼€è¾Ÿç©ºé—´
 
 	transform(v.begin(), v.end(), vTarget.begin(), Transform());
 
@@ -46,7 +46,6 @@ int main() {
 
 	test01();
 
-	system("pause");
 
 	return 0;
 }

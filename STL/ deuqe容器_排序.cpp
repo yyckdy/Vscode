@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 #include <deque>
-#include <algorithm> //±ê×¼Ëã·¨Í·ÎÄ¼ş
+#include <algorithm> //æ ‡å‡†ç®—æ³•å¤´æ–‡ä»¶
 
 
 void printDeque(const deque<int>&d)
@@ -13,7 +13,7 @@ void printDeque(const deque<int>&d)
 	cout << endl;
 }
 
-//dequeÈİÆ÷ÅÅĞò
+//dequeå®¹å™¨æ’åº
 void test01()
 {
 	deque<int>d;
@@ -27,11 +27,11 @@ void test01()
 	//300 200 100 10 20 30 
 	printDeque(d);
 
-	//ÅÅĞò  Ä¬ÈÏÅÅĞò¹æÔò  ´ÓĞ¡µ½´ó ÉıĞò
-	//¶ÔÓÚÖ§³ÖËæ»ú·ÃÎÊµÄµü´úÆ÷µÄÈİÆ÷£¬¶¼¿ÉÒÔÀûÓÃsortËã·¨Ö±½Ó¶ÔÆä½øĞĞÅÅĞò
-	//vectorÈİÆ÷Ò²¿ÉÒÔÀûÓÃ sort½øĞĞÅÅĞò
+	//æ’åº  é»˜è®¤æ’åºè§„åˆ™  ä»å°åˆ°å¤§ å‡åº
+	//å¯¹äºæ”¯æŒéšæœºè®¿é—®çš„è¿­ä»£å™¨çš„å®¹å™¨ï¼Œéƒ½å¯ä»¥åˆ©ç”¨sortç®—æ³•ç›´æ¥å¯¹å…¶è¿›è¡Œæ’åº
+	//vectorå®¹å™¨ä¹Ÿå¯ä»¥åˆ©ç”¨ sortè¿›è¡Œæ’åº
 	sort(d.begin(), d.end());
-	cout << "ÅÅĞòºó£º " << endl;
+	cout << "æ’åºåï¼š " << endl;
 	printDeque(d);
 }
 
@@ -39,7 +39,6 @@ int main() {
 
 	test01();
 
-	system("pause");
 
 	return 0;
 }

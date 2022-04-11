@@ -1,56 +1,47 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//#include <algorithm>
-//
-//class MyPrint
-//{
-//public:
-//	void operator()(int val)
-//	{	
-//		cout << val << " ";
-//	}
-//};
-//
-//class Greater30
-//{
-//public:
-//	bool operator()(int val)
-//	{
-//		return val >= 30;
-//	}
-//};
-//
-////≥£”√øΩ±¥∫ÕÃÊªªÀ„∑® replace_if
-//void test01()
-//{
-//	vector<int>v;
-//	v.push_back(10);
-//	v.push_back(40);
-//	v.push_back(20);
-//	v.push_back(40);
-//	v.push_back(30);
-//	v.push_back(50);
-//	v.push_back(20);
-//	v.push_back(30);
-//
-//	cout << "ÃÊªª«∞£∫ " << endl;
-//	for_each(v.begin(), v.end(), MyPrint());
-//	cout << endl;
-//
-//	//Ω´¥Û”⁄µ»”⁄30  ÃÊªªŒ™ 3000
-//	replace_if(v.begin(), v.end(), Greater30(),3000);
-//	cout << "ÃÊªª∫Û£∫ " << endl;
-//	for_each(v.begin(), v.end(), MyPrint());
-//	cout << endl;
-//
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+#include<algorithm>
+
+class MyPrint
+{
+public:
+	void operator()(int val)
+	{
+		cout << val << " ";
+	}
+};
+
+//Â∏∏Áî®Êã∑Ë¥ùÂíåÊõøÊç¢ÁÆóÊ≥ï replace
+void test01()
+{
+
+	vector<int>v;
+	v.push_back(20);
+	v.push_back(30);
+	v.push_back(50);
+	v.push_back(30);
+	v.push_back(40);
+	v.push_back(20);
+	v.push_back(10);
+	v.push_back(20);
+
+	cout << "ÊõøÊç¢ÂâçÔºö" << endl;
+	for_each(v.begin(), v.end(), MyPrint());
+	cout << endl;
+
+
+	//Â∞Ü20 ÊõøÊç¢ 2000
+	replace(v.begin(), v.end(), 20, 2000);
+	cout << "ÊõøÊç¢ÂêéÔºö" << endl;
+	for_each(v.begin(), v.end(), MyPrint());
+	cout << endl;
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}

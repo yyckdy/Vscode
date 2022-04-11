@@ -1,36 +1,35 @@
-//#include<iostream>
-//using namespace std;
-//#include <vector>
-//#include <algorithm>
-//
-////³£ÓÃ²éÕÒËã·¨ binary_search
-//void test01()
-//{
-//	vector<int>v;
-//	for (int i = 0; i < 10; i++)
-//	{
-//		v.push_back(i);
-//	}
-//	//v.push_back(2);  Èç¹ûÊÇÎŞĞòĞòÁĞ£¬½á¹ûÎ´Öª£¡
-//	//²éÕÒÈİÆ÷ÖĞÊÇ·ñÓĞ9 ÔªËØ
-//	//×¢Òâ£ºÈİÆ÷±ØĞëÊÇÓĞĞòµÄĞòÁĞ
-//	bool ret = binary_search(v.begin(), v.end(), 9);
-//
-//	if (ret)
-//	{
-//		cout << "ÕÒµ½ÁËÔªËØ" << endl;
-//	}
-//	else
-//	{
-//		cout << "Î´ÕÒµ½" << endl;
-//	}
-//}
-//
-//int main() {
-//
-//	test01();
-//
-//	system("pause");
-//
-//	return 0;
-//}
+#include<iostream>
+using namespace std;
+#include <vector>
+#include <algorithm>
+
+//å¸¸ç”¨æŸ¥æ‰¾ç®—æ³• binary_search
+void test01()
+{
+	vector<int>v;
+	for (int i = 0; i < 10; i++)
+	{
+		v.push_back(i);
+	}
+	//v.push_back(2);  å¦‚æœæ˜¯æ— åºåºåˆ—ï¼Œç»“æœæœªçŸ¥ï¼
+	//æŸ¥æ‰¾å®¹å™¨ä¸­æ˜¯å¦æœ‰9 å…ƒç´ 
+	//æ³¨æ„ï¼šå®¹å™¨å¿…é¡»æ˜¯æœ‰åºçš„åºåˆ—
+	bool ret = binary_search(v.begin(), v.end(), 9);
+
+	if (ret)
+	{
+		cout << "æ‰¾åˆ°äº†å…ƒç´ " << endl;
+	}
+	else
+	{
+		cout << "æœªæ‰¾åˆ°" << endl;
+	}
+}
+
+int main() {
+
+	test01();
+
+
+	return 0;
+}
