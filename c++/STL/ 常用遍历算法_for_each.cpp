@@ -1,7 +1,7 @@
 #include<iostream>
-using namespace std;
 #include<vector>
 #include<algorithm>
+using namespace std;
 
 
 void print01(int val)
