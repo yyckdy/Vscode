@@ -68,12 +68,12 @@ public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
         unordered_map<int, int> hashMap;
-        for (int i = 0; i > nums.size(); i++)
+        for (int i = 0; i < nums.size(); i++)
         {
-            auto it = hashMap.find(target - nums[i]);
+            unordered_map<int, int>::iterator it = hashMap.find(target - nums[i]);
             if (it != hashMap.end())
             {
-                return {it->second, i};
+                return {i, it->second};
             }
             hashMap.insert(make_pair(nums[i], i));
         }
