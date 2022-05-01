@@ -6,6 +6,7 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "version": "cpp"
+        "version": "cpp",
+        "istream": "cpp"
     }
 }

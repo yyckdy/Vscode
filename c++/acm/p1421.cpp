@@ -3,8 +3,9 @@
 using namespace std;
 int main()
 {
- 
-    string s="helloworld";
-    cout<<s.substr()<<endl;
+    int a;
+    int b;
+    cin >> a >> b;
+    cout << (10 * a + b) / 19<<endl;
     return 0;
 }
