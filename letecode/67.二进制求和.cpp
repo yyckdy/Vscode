@@ -41,32 +41,70 @@
  *
  */
 #include <iostream>
-using namespace std;
 #include <string>
+#include <algorithm>
+#include <vector>
+#include <unordered_map>
+using namespace std;
 // @lc code=start
 class Solution
 {
 public:
     string addBinary(string a, string b)
     {
-        int res1 = 0;
-        int res2 = 0;
-        for (int i = a.size(); i > 0; i--)
+        int index1 = a.size() - 1;
+        int index2 = b.size() - 1;
+        if (index1 > index2)
         {
-            res1 += pow(2, i - 1) * ((int)a[i] - 48);
+            b.insert(b.begin(), index1 - index2, '0');
+            index2 = b.size()-1;
         }
-        for (int i = b.size(); i > 0; i--)
+        if (index1 < index2)
         {
-            res2 += pow(2, i - 1) * ((int)b[i] - 48);
+            a.insert(a.begin(), index2 - index1, '0');
+            index1 = a.size()-1;
         }
-        int temp = res1 + res2;
-        string s = "";
-        while (temp != 0)
+        int carry = 0;
+        string res = "";
+        while ((index1 + 1) && (index2 + 1))
         {
-            s.append(to_string(temp % 2));
-            temp /= 2;
+            int temp = (int)a[index1] - 48 + (int)b[index2] - 48;
+            temp += carry;
+            if (temp == 2)
+            {
+                // 0
+                res.insert(res.begin(), (char)48);
+                carry = 1;
+            }
+            else if (temp == 3)
+            {
+                // 1
+                res.insert(res.begin(), (char)49);
+                carry = 1;
+            }
+            else
+            {
+                // temp
+                res.insert(res.begin(), (char)(temp + 48));
+                carry = 0;
+            }
+            index1--;
+            index2--;
         }
-        return s;
+        if (carry)
+        {
+            // 1
+
+            res.insert(res.begin(), (char)49);
+        }
+
+        return res;
     }
 };
 // @lc code=end
+int main()
+{
+    Solution s;
+    string res = s.addBinary("11", "1");
+    cout<<res<<endl;
+}
